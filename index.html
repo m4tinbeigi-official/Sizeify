@@ -7,29 +7,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Vazir', sans-serif;
       background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      direction: rtl;
-      color: #333;
+      direction: rtl; /* راست‌چین کردن محتوای صفحه */
     }
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 20px 0;
+      padding: 10px 0;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    header h1 {
-      font-size: 28px;
-      text-transform: uppercase;
     }
     .container {
       width: 90%;
@@ -39,74 +28,46 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px;
     }
     .card {
       background: white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 8px;
       margin: 10px;
       padding: 20px;
       flex: 1;
       min-width: 250px;
-      text-align: right;
-      transition: transform 0.3s ease-in-out;
-    }
-    .card:hover {
-      transform: translateY(-10px);
+      text-align: right; /* تنظیم راست‌چین برای متن */
     }
     h2 {
       color: #4CAF50;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.6;
     }
     .social-share a {
       text-decoration: none;
-      margin: 10px;
-      font-size: 30px;
+      margin: 5px;
+      font-size: 24px;
       color: #333;
-      transition: color 0.3s ease;
     }
     .social-share a:hover {
       color: #4CAF50;
     }
     .image-size {
       text-align: center;
-      margin-top: 10px;
     }
     .image-size img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
     }
-    .image-size img:hover {
-      transform: scale(1.05);
+    .image-size p {
+      margin-top: 10px;
     }
     .responsive-img {
       width: 100%;
     }
-    .platform-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-    .platform-image:hover {
-      transform: scale(1.05);
-    }
-
-    /* Improved card layout */
-    .card-content {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #333;
-      text-align: justify;
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
     }
 
     footer {
@@ -114,36 +75,6 @@
       padding: 20px;
       background-color: #4CAF50;
       color: white;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    footer p {
-      font-size: 16px;
-    }
-
-    /* Animation for platform section */
-    .card h2 {
-      animation: slideIn 1s ease-out;
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateX(-100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    /* Small screen adjustments */
-    @media (max-width: 768px) {
-      .row {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
@@ -155,87 +86,102 @@
 
   <div class="container">
     <div class="row">
-
-      <!-- Instagram Post -->
-      <div class="card">
+      <!-- Digital Platform Sizes -->
+      <div class="card" data-platform="Instagram Post" data-dimensions="1080x1080" data-size="10.8x10.8">
         <h2>پست اینستاگرام</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1080x1080.png?text=Instagram+Post" alt="پست اینستاگرام">
+          <img src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
           <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
-        <div class="card-content">
-          <p>پست‌های اینستاگرام باید در ابعاد مربعی منتشر شوند تا بیشترین تاثیر را داشته باشند. این ابعاد مناسب برای تصاویر ثابت است و توصیه می‌شود برای جلب توجه بیشتر، از تصاویر جذاب و با کیفیت استفاده کنید.</p>
-        </div>
       </div>
-
-      <!-- Instagram Story -->
-      <div class="card">
+      
+      <div class="card" data-platform="Instagram Story" data-dimensions="1080x1920" data-size="10.8x19.2">
         <h2>استوری اینستاگرام</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1080x1920.png?text=Instagram+Story" alt="استوری اینستاگرام">
+          <img src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
           <p>ابعاد: 1080x1920 پیکسل (10.8x19.2 سانتی‌متر)</p>
         </div>
-        <div class="card-content">
-          <p>استوری‌ها به صورت عمودی نمایش داده می‌شوند. این ابعاد مخصوص استوری‌های اینستاگرام است که به راحتی می‌توانند در این فرمت نمایش داده شوند. برای استوری‌های تبلیغاتی یا اطلاع‌رسانی، این ابعاد بهترین گزینه هستند.</p>
-        </div>
       </div>
 
-      <!-- LinkedIn Cover -->
-      <div class="card">
+      <div class="card" data-platform="LinkedIn Cover" data-dimensions="1200x628" data-size="12x6.28">
         <h2>کاور لینکدین</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
+          <img src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
           <p>ابعاد: 1200x628 پیکسل (12x6.28 سانتی‌متر)</p>
         </div>
-        <div class="card-content">
-          <p>کاور لینکدین معمولاً باید از تصاویری با کیفیت بالا و طراحی حرفه‌ای استفاده کند. ابعاد صحیح به جذب توجه مخاطب و ایجاد یک پروفایل حرفه‌ای کمک می‌کند.</p>
-        </div>
       </div>
 
-      <!-- Twitter Post -->
-      <div class="card">
+      <div class="card" data-platform="Twitter Post" data-dimensions="1200x675" data-size="12x6.75">
         <h2>پست توییتر</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
+          <img src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
           <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
-        <div class="card-content">
-          <p>پست‌های توییتر معمولاً باید تصویری با ابعاد مناسب داشته باشند تا در فید کاربران به‌خوبی نمایش داده شوند. این ابعاد برای تصاویر همراه با توییت‌ها مناسب است.</p>
-        </div>
       </div>
 
-      <!-- Facebook Post -->
-      <div class="card">
-        <h2>پست فیس‌بوک</h2>
+      <!-- Event and Print Platform Sizes -->
+      <div class="card" data-platform="Esminar Poster" data-dimensions="1200x675" data-size="12x6.75">
+        <h2>پوستر ایسمینار</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1200x630.png?text=Facebook+Post" alt="پست فیس‌بوک">
-          <p>ابعاد: 1200x630 پیکسل (12x6.3 سانتی‌متر)</p>
-        </div>
-        <div class="card-content">
-          <p>پست‌های فیس‌بوک باید در ابعاد 1200x630 پیکسل منتشر شوند تا به‌خوبی در فید کاربران نشان داده شوند. این ابعاد برای تصاویر تبلیغاتی یا محتوای تصویری مناسب است.</p>
+          <img src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
+          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- YouTube Thumbnail -->
-      <div class="card">
-        <h2>تصویر کوچک یوتیوب</h2>
+      <div class="card" data-platform="Evand Poster" data-dimensions="1200x675" data-size="12x6.75">
+        <h2>پوستر ایوند</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1280x720.png?text=YouTube+Thumbnail" alt="تصویر کوچک یوتیوب">
-          <p>ابعاد: 1280x720 پیکسل (12.8x7.2 سانتی‌متر)</p>
-        </div>
-        <div class="card-content">
-          <p>تصاویر کوچک یوتیوب باید جذاب و گیرا باشند تا کاربران را برای کلیک کردن روی ویدیو ترغیب کنند. ابعاد مناسب برای تصویر کوچک یوتیوب باید به‌طور کامل در صفحه نمایش داده شود.</p>
+          <img src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
+          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- Social Sharing -->
-      <div class="card">
-        <h2>اشتراک‌گذاری در شبکه‌های اجتماعی</h2>
-        <div class="social-share">
-          <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://b2n.ir/Sizeify" target="_blank" class="fab fa-linkedin-in"></a>
-          <a href="https://twitter.com/intent/tweet?text=https://b2n.ir/Sizeify" target="_blank" class="fab fa-twitter"></a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://b2n.ir/Sizeify" target="_blank" class="fab fa-facebook"></a>
+      <!-- Print Platform Sizes -->
+      <div class="card" data-platform="Print Banner" data-dimensions="4000x1500" data-size="100x37.5">
+        <h2>بنر چاپی</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/4000x1500.png?text=Print+Banner" alt="بنر چاپی">
+          <p>ابعاد: 4000x1500 پیکسل (100x37.5 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <div class="card" data-platform="Business Card" data-dimensions="1050x600" data-size="9x5">
+        <h2>کارت ویزیت</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1050x600.png?text=Business+Card" alt="کارت ویزیت">
+          <p>ابعاد: 1050x600 پیکسل (9x5 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <div class="card" data-platform="ID Card" data-dimensions="1020x600" data-size="8.5x5">
+        <h2>کارت گردنی</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1020x600.png?text=ID+Card" alt="کارت گردنی">
+          <p>ابعاد: 1020x600 پیکسل (8.5x5 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <div class="card" data-platform="Pop-Up Banner" data-dimensions="2000x3000" data-size="50x75">
+        <h2>پاپ آپ بنر</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/2000x3000.png?text=Pop-Up+Banner" alt="پاپ آپ بنر">
+          <p>ابعاد: 2000x3000 پیکسل (50x75 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <div class="card" data-platform="Roll-Up Banner" data-dimensions="850x2000" data-size="22x50">
+        <h2>بنر رول آپ</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/850x2000.png?text=Roll-Up+Banner" alt="بنر رول آپ">
+          <p>ابعاد: 850x2000 پیکسل (22x50 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <div class="card" data-platform="Flyer" data-dimensions="2100x2970" data-size="21x29.7">
+        <h2>فلیئر</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/2100x2970.png?text=Flyer" alt="فلیئر">
+          <p>ابعاد: 2100x2970 پیکسل (21x29.7 سانتی‌متر)</p>
         </div>
       </div>
 
@@ -243,7 +189,13 @@
   </div>
 
   <footer>
-    <p>&copy; 2024 تمامی حقوق محفوظ است</p>
+    <div class="social-share">
+      <a href="https://www.instagram.com/" target="_blank" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank" title="توییتر"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" title="لینکدین"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" title="فیسبوک"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>تمامی حقوق محفوظ است &copy; 2024</p>
   </footer>
 
 </body>
