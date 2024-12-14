@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
   <style>
-    /* Reset general styles */
     * {
       margin: 0;
       padding: 0;
@@ -61,6 +60,11 @@
       font-size: 22px;
       margin-bottom: 10px;
     }
+    p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
     .social-share a {
       text-decoration: none;
       margin: 10px;
@@ -87,14 +91,6 @@
     .responsive-img {
       width: 100%;
     }
-    @media (max-width: 768px) {
-      .row {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
-    /* Class for all platform images */
     .platform-image {
       max-width: 100%;
       height: auto;
@@ -103,6 +99,14 @@
     }
     .platform-image:hover {
       transform: scale(1.05);
+    }
+
+    /* Improved card layout */
+    .card-content {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+      text-align: justify;
     }
 
     footer {
@@ -133,6 +137,14 @@
         opacity: 1;
       }
     }
+
+    /* Small screen adjustments */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -144,46 +156,74 @@
   <div class="container">
     <div class="row">
 
-      <!-- Digital Platform Sizes -->
-      <div class="card" data-platform="Instagram Post" data-dimensions="1080x1080" data-size="10.8x10.8">
+      <!-- Instagram Post -->
+      <div class="card">
         <h2>پست اینستاگرام</h2>
         <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
+          <img class="platform-image" src="https://via.placeholder.com/1080x1080.png?text=Instagram+Post" alt="پست اینستاگرام">
           <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
-      </div>
-
-      <div class="card" data-platform="Instagram Story" data-dimensions="1080x1920" data-size="10.8x19.2">
-        <h2>استوری اینستاگرام</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
-          <p>ابعاد: 1080x1920 پیکسل (10.8x19.2 سانتی‌متر)</p>
+        <div class="card-content">
+          <p>پست‌های اینستاگرام باید در ابعاد مربعی منتشر شوند تا بیشترین تاثیر را داشته باشند. این ابعاد مناسب برای تصاویر ثابت است و توصیه می‌شود برای جلب توجه بیشتر، از تصاویر جذاب و با کیفیت استفاده کنید.</p>
         </div>
       </div>
 
-      <div class="card" data-platform="LinkedIn Cover" data-dimensions="1200x628" data-size="12x6.28">
+      <!-- Instagram Story -->
+      <div class="card">
+        <h2>استوری اینستاگرام</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/1080x1920.png?text=Instagram+Story" alt="استوری اینستاگرام">
+          <p>ابعاد: 1080x1920 پیکسل (10.8x19.2 سانتی‌متر)</p>
+        </div>
+        <div class="card-content">
+          <p>استوری‌ها به صورت عمودی نمایش داده می‌شوند. این ابعاد مخصوص استوری‌های اینستاگرام است که به راحتی می‌توانند در این فرمت نمایش داده شوند. برای استوری‌های تبلیغاتی یا اطلاع‌رسانی، این ابعاد بهترین گزینه هستند.</p>
+        </div>
+      </div>
+
+      <!-- LinkedIn Cover -->
+      <div class="card">
         <h2>کاور لینکدین</h2>
         <div class="image-size">
           <img class="platform-image" src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
           <p>ابعاد: 1200x628 پیکسل (12x6.28 سانتی‌متر)</p>
         </div>
+        <div class="card-content">
+          <p>کاور لینکدین معمولاً باید از تصاویری با کیفیت بالا و طراحی حرفه‌ای استفاده کند. ابعاد صحیح به جذب توجه مخاطب و ایجاد یک پروفایل حرفه‌ای کمک می‌کند.</p>
+        </div>
       </div>
 
-      <div class="card" data-platform="Twitter Post" data-dimensions="1200x675" data-size="12x6.75">
+      <!-- Twitter Post -->
+      <div class="card">
         <h2>پست توییتر</h2>
         <div class="image-size">
           <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
           <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
+        <div class="card-content">
+          <p>پست‌های توییتر معمولاً باید تصویری با ابعاد مناسب داشته باشند تا در فید کاربران به‌خوبی نمایش داده شوند. این ابعاد برای تصاویر همراه با توییت‌ها مناسب است.</p>
+        </div>
       </div>
 
-      <!-- اشتراک‌گذاری -->
+      <!-- Additional Platform: Facebook -->
+      <div class="card">
+        <h2>پست فیس‌بوک</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/1200x630.png?text=Facebook+Post" alt="پست فیس‌بوک">
+          <p>ابعاد: 1200x630 پیکسل (12x6.3 سانتی‌متر)</p>
+        </div>
+        <div class="card-content">
+          <p>پست‌های فیس‌بوک باید در ابعاد 1200x630 پیکسل منتشر شوند تا به‌خوبی در فید کاربران نشان داده شوند. این ابعاد برای تصاویر تبلیغاتی یا محتوای تصویری مناسب است.</p>
+        </div>
+      </div>
+
+      <!-- Social Sharing -->
       <div class="card">
         <h2>اشتراک‌گذاری در شبکه‌های اجتماعی</h2>
         <div class="social-share">
           <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
           <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://b2n.ir/Sizeify" target="_blank" class="fab fa-linkedin-in"></a>
           <a href="https://twitter.com/intent/tweet?text=https://b2n.ir/Sizeify" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://b2n.ir/Sizeify" target="_blank" class="fab fa-facebook"></a>
         </div>
       </div>
 
