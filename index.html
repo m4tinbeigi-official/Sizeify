@@ -7,18 +7,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
   <style>
+    /* Reset general styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Vazir', sans-serif;
       background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      direction: rtl; /* راست‌چین کردن محتوای صفحه */
+      direction: rtl;
+      color: #333;
     }
     header {
       background-color: #4CAF50;
       color: white;
-      padding: 10px 0;
+      padding: 20px 0;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 28px;
+      text-transform: uppercase;
     }
     .container {
       width: 90%;
@@ -28,45 +40,49 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 20px;
     }
     .card {
       background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 10px;
       margin: 10px;
       padding: 20px;
       flex: 1;
       min-width: 250px;
-      text-align: right; /* تنظیم راست‌چین برای متن */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* افزودن انیمیشن برای افکت hover */
+      text-align: right;
+      transition: transform 0.3s ease-in-out;
     }
     .card:hover {
-      transform: translateY(-10px); /* ایجاد افکت شناور */
-      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      transform: translateY(-10px);
     }
     h2 {
       color: #4CAF50;
-      font-size: 1.5rem;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
     .social-share a {
       text-decoration: none;
-      margin: 5px;
-      font-size: 24px;
+      margin: 10px;
+      font-size: 30px;
       color: #333;
+      transition: color 0.3s ease;
     }
     .social-share a:hover {
       color: #4CAF50;
     }
     .image-size {
       text-align: center;
+      margin-top: 10px;
     }
     .image-size img {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
     }
-    .image-size p {
-      margin-top: 10px;
-      color: #555;
+    .image-size img:hover {
+      transform: scale(1.05);
     }
     .responsive-img {
       width: 100%;
@@ -74,6 +90,7 @@
     @media (max-width: 768px) {
       .row {
         flex-direction: column;
+        align-items: center;
       }
     }
 
@@ -81,6 +98,11 @@
     .platform-image {
       max-width: 100%;
       height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .platform-image:hover {
+      transform: scale(1.05);
     }
 
     footer {
@@ -88,16 +110,28 @@
       padding: 20px;
       background-color: #4CAF50;
       color: white;
+      margin-top: 20px;
+      border-radius: 10px;
     }
-    
-    /* اضافه کردن استایل برای دکمه‌های اشتراک‌گذاری */
-    .social-share {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+    footer p {
+      font-size: 16px;
     }
-    .social-share a {
-      margin: 0 10px;
+
+    /* Animation for platform section */
+    .card h2 {
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -109,7 +143,7 @@
 
   <div class="container">
     <div class="row">
-      
+
       <!-- Digital Platform Sizes -->
       <div class="card" data-platform="Instagram Post" data-dimensions="1080x1080" data-size="10.8x10.8">
         <h2>پست اینستاگرام</h2>
@@ -118,7 +152,7 @@
           <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
       </div>
-      
+
       <div class="card" data-platform="Instagram Story" data-dimensions="1080x1920" data-size="10.8x19.2">
         <h2>استوری اینستاگرام</h2>
         <div class="image-size">
@@ -143,71 +177,6 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Esminar Poster" data-dimensions="1200x675" data-size="12x6.75">
-        <h2>پوستر ایسمینار</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
-          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="Evand Poster" data-dimensions="1200x675" data-size="12x6.75">
-        <h2>پوستر ایوند</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
-          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <!-- Print Platform Sizes -->
-      <div class="card" data-platform="Print Banner" data-dimensions="4000x1500" data-size="100x37.5">
-        <h2>بنر چاپی</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/4000x1500.png?text=Print+Banner" alt="بنر چاپی">
-          <p>ابعاد: 4000x1500 پیکسل (100x37.5 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="Business Card" data-dimensions="1050x600" data-size="9x5">
-        <h2>کارت ویزیت</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1050x600.png?text=Business+Card" alt="کارت ویزیت">
-          <p>ابعاد: 1050x600 پیکسل (9x5 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="ID Card" data-dimensions="1020x600" data-size="8.5x5">
-        <h2>کارت گردنی</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/1020x600.png?text=ID+Card" alt="کارت گردنی">
-          <p>ابعاد: 1020x600 پیکسل (8.5x5 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="Pop-Up Banner" data-dimensions="2000x3000" data-size="50x75">
-        <h2>پاپ آپ بنر</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/2000x3000.png?text=Pop-Up+Banner" alt="پاپ آپ بنر">
-          <p>ابعاد: 2000x3000 پیکسل (50x75 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="Roll-Up Banner" data-dimensions="850x2000" data-size="22x50">
-        <h2>بنر رول آپ</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/850x2000.png?text=Roll-Up+Banner" alt="بنر رول آپ">
-          <p>ابعاد: 850x2000 پیکسل (22x50 سانتی‌متر)</p>
-        </div>
-      </div>
-
-      <div class="card" data-platform="Flyer" data-dimensions="2100x2970" data-size="21x29.7">
-        <h2>فلیئر</h2>
-        <div class="image-size">
-          <img class="platform-image" src="https://via.placeholder.com/2100x2970.png?text=Flyer" alt="فلیئر">
-          <p>ابعاد: 2100x2970 پیکسل (21x29.7 سانتی‌متر)</p>
-        </div>
-      </div>
-
       <!-- اشتراک‌گذاری -->
       <div class="card">
         <h2>اشتراک‌گذاری در شبکه‌های اجتماعی</h2>
@@ -217,7 +186,7 @@
           <a href="https://twitter.com/intent/tweet?text=https://b2n.ir/Sizeify" target="_blank" class="fab fa-twitter"></a>
         </div>
       </div>
-      
+
     </div>
   </div>
 
