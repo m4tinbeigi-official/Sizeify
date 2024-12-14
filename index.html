@@ -67,6 +67,12 @@
         flex-direction: column;
       }
     }
+
+    /* Class for all platform images */
+    .platform-image {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -78,61 +84,93 @@
   <div class="container">
     <div class="row">
       
-      <!-- پست اینستاگرام -->
-      <div class="card">
+      <!-- Use one class for displaying images for each platform -->
+      <!-- Each card can be customized using data attributes -->
+      <div class="card" data-platform="Instagram Post" data-dimensions="1080x1080" data-size="10.8x10.8">
         <h2>پست اینستاگرام</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
+          <img class="platform-image" src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
           <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
       </div>
       
-      <!-- استوری اینستاگرام -->
-      <div class="card">
+      <div class="card" data-platform="Instagram Story" data-dimensions="1080x1920" data-size="10.8x19.2">
         <h2>استوری اینستاگرام</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
+          <img class="platform-image" src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
           <p>ابعاد: 1080x1920 پیکسل (10.8x19.2 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- لینکدین -->
-      <div class="card">
+      <div class="card" data-platform="LinkedIn Cover" data-dimensions="1200x628" data-size="12x6.28">
         <h2>کاور لینکدین</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
+          <img class="platform-image" src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
           <p>ابعاد: 1200x628 پیکسل (12x6.28 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- توییتر -->
-      <div class="card">
+      <div class="card" data-platform="Twitter Post" data-dimensions="1200x675" data-size="12x6.75">
         <h2>پست توییتر</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
+          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
           <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- ایسمینار -->
-      <div class="card">
+      <div class="card" data-platform="Esminar Poster" data-dimensions="1200x675" data-size="12x6.75">
         <h2>پوستر ایسمینار</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
+          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
           <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- ایوند -->
-      <div class="card">
+      <div class="card" data-platform="Evand Poster" data-dimensions="1200x675" data-size="12x6.75">
         <h2>پوستر ایوند</h2>
         <div class="image-size">
-          <img src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
+          <img class="platform-image" src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
           <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- اشتراک گذاری -->
+      <!-- Example for Print Poster A3 -->
+      <div class="card" data-platform="Print Poster A3" data-dimensions="3508x4961" data-size="29.7x42">
+        <h2>پوستر چاپی A3</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/3508x4961.png?text=Print+Poster+A3" alt="پوستر چاپی A3">
+          <p>ابعاد: 3508x4961 پیکسل (29.7x42 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <!-- Example for Print Poster A4 -->
+      <div class="card" data-platform="Print Poster A4" data-dimensions="2480x3508" data-size="21x29.7">
+        <h2>پوستر چاپی A4</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/2480x3508.png?text=Print+Poster+A4" alt="پوستر چاپی A4">
+          <p>ابعاد: 2480x3508 پیکسل (21x29.7 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <!-- Example for Business Card -->
+      <div class="card" data-platform="Business Card" data-dimensions="1050x600" data-size="9x5">
+        <h2>کارت ویزیت</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/1050x600.png?text=Business+Card" alt="کارت ویزیت">
+          <p>ابعاد: 1050x600 پیکسل (9x5 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <!-- Example for Print Banner -->
+      <div class="card" data-platform="Print Banner" data-dimensions="4000x1500" data-size="100x37.5">
+        <h2>بنر چاپی</h2>
+        <div class="image-size">
+          <img class="platform-image" src="https://via.placeholder.com/4000x1500.png?text=Print+Banner" alt="بنر چاپی">
+          <p>ابعاد: 4000x1500 پیکسل (100x37.5 سانتی‌متر)</p>
+        </div>
+      </div>
+
+      <!-- اشتراک‌گذاری -->
       <div class="card">
         <h2>اشتراک‌گذاری در شبکه‌های اجتماعی</h2>
         <div class="social-share">
@@ -148,11 +186,6 @@
   <footer style="text-align: center; padding: 20px; background-color: #4CAF50; color: white;">
     <p>&copy; 2024 تمامی حقوق محفوظ است</p>
   </footer>
-
-  <!-- Bootstrap JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
