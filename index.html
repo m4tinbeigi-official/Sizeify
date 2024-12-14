@@ -3,231 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>راهنمای طراحی برای رویدادها</title>
-  <!-- Import Vazir Font -->
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/vazir/css.css" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  <title>راهنمای طراحی ابعاد برای رویدادها</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Vazir', sans-serif;
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
     }
     .container {
-      margin-top: 30px;
-    }
-    .img-size {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    .card-body {
-      text-align: center;
-      padding: 20px;
-    }
-    h1, h3 {
-      font-size: 2em;
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    .card-title {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    .card-text {
-      font-size: 1em;
-      color: #777;
+      width: 90%;
+      margin: 20px auto;
     }
     .row {
-      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
     .card {
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      border: none;
-      margin-bottom: 30px;
-    }
-    .card img {
-      border-radius: 10px;
-    }
-    .info-box {
-      padding: 20px;
-      margin-top: 20px;
-      background-color: #ffffff;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       border-radius: 8px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 250px;
     }
-    .info-box h5 {
-      font-size: 1.3em;
-      margin-bottom: 15px;
+    h2 {
+      color: #4CAF50;
     }
-    .info-box p {
-      font-size: 1.1em;
-      color: #555;
+    .social-share a {
+      text-decoration: none;
+      margin: 5px;
+      font-size: 24px;
+      color: #333;
     }
-    .share-box {
+    .social-share a:hover {
+      color: #4CAF50;
+    }
+    .image-size {
       text-align: center;
-      margin-top: 40px;
     }
-    .share-box a {
-      font-size: 1.5em;
-      margin: 0 15px;
-      color: #555;
+    .image-size img {
+      max-width: 100%;
+      height: auto;
     }
-
-    .platform-heading {
-      background-color: #3498db;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
+    .image-size p {
+      margin-top: 10px;
     }
-
+    .responsive-img {
+      width: 100%;
+    }
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.5em;
-      }
-      h3 {
-        font-size: 1.3em;
-      }
-      .card-title {
-        font-size: 1.1em;
-      }
-      .card-body {
-        padding: 15px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .container {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      h1 {
-        font-size: 1.3em;
-      }
-      h3 {
-        font-size: 1.2em;
+      .row {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>راهنمای طراحی ابعاد برای رویدادها</h1>
+  </header>
+
   <div class="container">
-    <h1>راهنمای طراحی برای رویدادها</h1>
-
-    <!-- دسته‌بندی پلتفرم‌ها -->
-    <div class="platform-category">
-      <!-- بخش پلتفرم اینستاگرام -->
-      <h3 class="platform-heading">اینستاگرام</h3>
-      <div class="row">
-        <!-- پست اینستاگرام -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1080x1080.png?text=Instagram+Post" alt="پست اینستاگرام" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">پست اینستاگرام</h5>
-              <p class="card-text">ابعاد: 1080 × 1080 پیکسل</p>
-              <p class="card-text">ابعاد: 10 × 10 سانتی‌متر</p>
-            </div>
-          </div>
+    <div class="row">
+      
+      <!-- پست اینستاگرام -->
+      <div class="card">
+        <h2>پست اینستاگرام</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
+          <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
-
-        <!-- استوری اینستاگرام -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1080x1920.png?text=Instagram+Story" alt="استوری اینستاگرام" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">استوری اینستاگرام</h5>
-              <p class="card-text">ابعاد: 1080 × 1920 پیکسل</p>
-              <p class="card-text">ابعاد: 9 × 16 سانتی‌متر</p>
-            </div>
-          </div>
+      </div>
+      
+      <!-- استوری اینستاگرام -->
+      <div class="card">
+        <h2>استوری اینستاگرام</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
+          <p>ابعاد: 1080x1920 پیکسل (10.8x19.2 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- بخش پلتفرم لینکدین -->
-      <h3 class="platform-heading">لینکدین</h3>
-      <div class="row">
-        <!-- کاور لینکدین -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1500x500.png?text=LinkedIn+Cover" alt="کاور لینکدین" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">کاور لینکدین</h5>
-              <p class="card-text">ابعاد: 1500 × 500 پیکسل</p>
-              <p class="card-text">ابعاد: 12.7 × 4.2 سانتی‌متر</p>
-            </div>
-          </div>
+      <!-- لینکدین -->
+      <div class="card">
+        <h2>کاور لینکدین</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
+          <p>ابعاد: 1200x628 پیکسل (12x6.28 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- بخش پلتفرم ایوند -->
-      <h3 class="platform-heading">ایوند</h3>
-      <div class="row">
-        <!-- پوستر ایوند -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1200x628.png?text=Evand+Poster" alt="پوستر ایوند" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">پوستر ایوند</h5>
-              <p class="card-text">ابعاد: 1200 × 628 پیکسل</p>
-              <p class="card-text">ابعاد: 10.16 × 5.33 سانتی‌متر</p>
-            </div>
-          </div>
+      <!-- توییتر -->
+      <div class="card">
+        <h2>پست توییتر</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
+          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- بخش پلتفرم ایسمینار -->
-      <h3 class="platform-heading">ایسمینار</h3>
-      <div class="row">
-        <!-- پوستر ایسمینار -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1200x675.png?text=E-seminar+Poster" alt="پوستر ایسمینار" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">پوستر ایسمینار</h5>
-              <p class="card-text">ابعاد: 1200 × 675 پیکسل</p>
-              <p class="card-text">ابعاد: 10.16 × 5.73 سانتی‌متر</p>
-            </div>
-          </div>
+      <!-- ایسمینار -->
+      <div class="card">
+        <h2>پوستر ایسمینار</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
+          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- بخش پلتفرم توییتر -->
-      <h3 class="platform-heading">توییتر</h3>
-      <div class="row">
-        <!-- پست توییتر -->
-        <div class="col-md-4 col-sm-6">
-          <div class="card">
-            <img src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر" class="card-img-top img-size">
-            <div class="card-body">
-              <h5 class="card-title">پست توییتر</h5>
-              <p class="card-text">ابعاد: 1200 × 675 پیکسل</p>
-              <p class="card-text">ابعاد: 10.16 × 5.73 سانتی‌متر</p>
-            </div>
-          </div>
+      <!-- ایوند -->
+      <div class="card">
+        <h2>پوستر ایوند</h2>
+        <div class="image-size">
+          <img src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
+          <p>ابعاد: 1200x675 پیکسل (12x6.75 سانتی‌متر)</p>
         </div>
       </div>
 
-      <!-- اشتراک‌گذاری لینک -->
-      <div class="share-box">
-        <h3>اشتراک‌گذاری ابعاد</h3>
-        <a href="https://www.instagram.com/sharer/sharer.php?u=#" target="_blank" class="fab fa-instagram"></a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=#" target="_blank" class="fab fa-linkedin-in"></a>
-        <a href="https://twitter.com/intent/tweet?text=#" target="_blank" class="fab fa-twitter"></a>
+      <!-- اشتراک گذاری -->
+      <div class="card">
+        <h2>اشتراک‌گذاری در شبکه‌های اجتماعی</h2>
+        <div class="social-share">
+          <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=#" target="_blank" class="fab fa-linkedin-in"></a>
+          <a href="https://twitter.com/intent/tweet?text=#" target="_blank" class="fab fa-twitter"></a>
+        </div>
       </div>
+      
     </div>
   </div>
+
+  <footer style="text-align: center; padding: 20px; background-color: #4CAF50; color: white;">
+    <p>&copy; 2024 تمامی حقوق محفوظ است</p>
+  </footer>
 
   <!-- Bootstrap JS, Popper.js, and jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
