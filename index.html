@@ -38,9 +38,15 @@
       flex: 1;
       min-width: 250px;
       text-align: right; /* تنظیم راست‌چین برای متن */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* افزودن انیمیشن برای افکت hover */
+    }
+    .card:hover {
+      transform: translateY(-10px); /* ایجاد افکت شناور */
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
     }
     h2 {
       color: #4CAF50;
+      font-size: 1.5rem;
     }
     .social-share a {
       text-decoration: none;
@@ -60,6 +66,7 @@
     }
     .image-size p {
       margin-top: 10px;
+      color: #555;
     }
     .responsive-img {
       width: 100%;
@@ -69,7 +76,7 @@
         flex-direction: column;
       }
     }
-    
+
     /* Class for all platform images */
     .platform-image {
       max-width: 100%;
@@ -81,6 +88,16 @@
       padding: 20px;
       background-color: #4CAF50;
       color: white;
+    }
+    
+    /* اضافه کردن استایل برای دکمه‌های اشتراک‌گذاری */
+    .social-share {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .social-share a {
+      margin: 0 10px;
     }
   </style>
 </head>
