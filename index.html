@@ -12,7 +12,7 @@
       background-color: #f4f4f9;
       margin: 0;
       padding: 0;
-      direction: rtl; /* راست‌چین کردن محتوای صفحه */
+      direction: rtl;
     }
     header {
       background-color: #4CAF50;
@@ -37,18 +37,9 @@
       padding: 20px;
       flex: 1;
       min-width: 250px;
-      text-align: right; /* تنظیم راست‌چین برای متن */
+      text-align: right;
     }
     h2 {
-      color: #4CAF50;
-    }
-    .social-share a {
-      text-decoration: none;
-      margin: 5px;
-      font-size: 24px;
-      color: #333;
-    }
-    .social-share a:hover {
       color: #4CAF50;
     }
     .image-size {
@@ -69,7 +60,6 @@
         flex-direction: column;
       }
     }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -87,15 +77,15 @@
   <div class="container">
     <div class="row">
       <!-- Digital Platform Sizes -->
-      <div class="card" data-platform="Instagram Post" data-dimensions="1080x1080" data-size="10.8x10.8">
+      <div class="card">
         <h2>پست اینستاگرام</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1080x1080.png?text=Post+Instagram" alt="پست اینستاگرام">
           <p>ابعاد: 1080x1080 پیکسل (10.8x10.8 سانتی‌متر)</p>
         </div>
       </div>
-      
-      <div class="card" data-platform="Instagram Story" data-dimensions="1080x1920" data-size="10.8x19.2">
+
+      <div class="card">
         <h2>استوری اینستاگرام</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1080x1920.png?text=Story+Instagram" alt="استوری اینستاگرام">
@@ -103,7 +93,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="LinkedIn Cover" data-dimensions="1200x628" data-size="12x6.28">
+      <div class="card">
         <h2>کاور لینکدین</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1200x628.png?text=LinkedIn+Cover" alt="کاور لینکدین">
@@ -111,7 +101,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Twitter Post" data-dimensions="1200x675" data-size="12x6.75">
+      <div class="card">
         <h2>پست توییتر</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1200x675.png?text=Twitter+Post" alt="پست توییتر">
@@ -120,7 +110,7 @@
       </div>
 
       <!-- Event and Print Platform Sizes -->
-      <div class="card" data-platform="Esminar Poster" data-dimensions="1200x675" data-size="12x6.75">
+      <div class="card">
         <h2>پوستر ایسمینار</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1200x675.png?text=Esminar+Poster" alt="پوستر ایسمینار">
@@ -128,7 +118,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Evand Poster" data-dimensions="1200x675" data-size="12x6.75">
+      <div class="card">
         <h2>پوستر ایوند</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1200x675.png?text=Event+Poster+Evand" alt="پوستر ایوند">
@@ -137,7 +127,7 @@
       </div>
 
       <!-- Print Platform Sizes -->
-      <div class="card" data-platform="Print Banner" data-dimensions="4000x1500" data-size="100x37.5">
+      <div class="card">
         <h2>بنر چاپی</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/4000x1500.png?text=Print+Banner" alt="بنر چاپی">
@@ -145,7 +135,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Business Card" data-dimensions="1050x600" data-size="9x5">
+      <div class="card">
         <h2>کارت ویزیت</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1050x600.png?text=Business+Card" alt="کارت ویزیت">
@@ -153,7 +143,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="ID Card" data-dimensions="1020x600" data-size="8.5x5">
+      <div class="card">
         <h2>کارت گردنی</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/1020x600.png?text=ID+Card" alt="کارت گردنی">
@@ -161,7 +151,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Pop-Up Banner" data-dimensions="2000x3000" data-size="50x75">
+      <div class="card">
         <h2>پاپ آپ بنر</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/2000x3000.png?text=Pop-Up+Banner" alt="پاپ آپ بنر">
@@ -169,7 +159,7 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Roll-Up Banner" data-dimensions="850x2000" data-size="22x50">
+      <div class="card">
         <h2>بنر رول آپ</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/850x2000.png?text=Roll-Up+Banner" alt="بنر رول آپ">
@@ -177,26 +167,18 @@
         </div>
       </div>
 
-      <div class="card" data-platform="Flyer" data-dimensions="2100x2970" data-size="21x29.7">
+      <div class="card">
         <h2>فلیئر</h2>
         <div class="image-size">
           <img src="https://via.placeholder.com/2100x2970.png?text=Flyer" alt="فلیئر">
           <p>ابعاد: 2100x2970 پیکسل (21x29.7 سانتی‌متر)</p>
         </div>
       </div>
-
     </div>
   </div>
 
   <footer>
-    <div class="social-share">
-      <a href="https://www.instagram.com/" target="_blank" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/" target="_blank" title="توییتر"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank" title="لینکدین"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/" target="_blank" title="فیسبوک"><i class="fab fa-facebook"></i></a>
-    </div>
-    <p>تمامی حقوق محفوظ است &copy; 2024</p>
+    <p>تمامی حقوق محفوظ است.</p>
   </footer>
-
 </body>
 </html>
