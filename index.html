@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/@fontsource/vazir/css.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <style>
     body {
@@ -68,6 +70,23 @@
       font-size: 1.1em;
       color: #555;
     }
+    .share-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .share-box a {
+      font-size: 1.5em;
+      margin: 0 15px;
+      color: #555;
+    }
+
+    .platform-heading {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
 
     @media (max-width: 768px) {
       h1 {
@@ -102,131 +121,67 @@
   <div class="container">
     <h1>راهنمای طراحی برای رویداد</h1>
 
-    <!-- بخش دسته‌بندی موارد چاپی -->
-    <h3>موارد چاپی</h3>
-    <div class="row">
-      <!-- پوستر A3 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/3508x4961.png?text=A3+Poster" alt="پوستر A3" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پوستر A3</h5>
-            <p class="card-text">ابعاد: 3508 × 4961 پیکسل</p>
-            <p class="card-text">ابعاد: 29.7 × 42 سانتی‌متر</p>
+    <!-- دسته‌بندی پلتفرم‌ها -->
+    <div class="platform-category">
+      <!-- بخش پلتفرم اینستاگرام -->
+      <h3 class="platform-heading">اینستاگرام</h3>
+      <div class="row">
+        <!-- پست اینستاگرام -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="https://via.placeholder.com/1080x1080.png?text=Instagram+Post" alt="پست اینستاگرام" class="card-img-top img-size">
+            <div class="card-body">
+              <h5 class="card-title">پست اینستاگرام</h5>
+              <p class="card-text">ابعاد: 1080 × 1080 پیکسل</p>
+              <p class="card-text">ابعاد: 10 × 10 سانتی‌متر</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- استوری اینستاگرام -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="https://via.placeholder.com/1080x1920.png?text=Instagram+Story" alt="استوری اینستاگرام" class="card-img-top img-size">
+            <div class="card-body">
+              <h5 class="card-title">استوری اینستاگرام</h5>
+              <p class="card-text">ابعاد: 1080 × 1920 پیکسل</p>
+              <p class="card-text">ابعاد: 9 × 16 سانتی‌متر</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- پوستر A2 -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/4961x7016.png?text=A2+Poster" alt="پوستر A2" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پوستر A2</h5>
-            <p class="card-text">ابعاد: 4961 × 7016 پیکسل</p>
-            <p class="card-text">ابعاد: 42 × 59.4 سانتی‌متر</p>
+      <!-- بخش پلتفرم لینکدین -->
+      <h3 class="platform-heading">لینکدین</h3>
+      <div class="row">
+        <!-- کاور لینکدین -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card">
+            <img src="https://via.placeholder.com/1500x500.png?text=LinkedIn+Cover" alt="کاور لینکدین" class="card-img-top img-size">
+            <div class="card-body">
+              <h5 class="card-title">کاور لینکدین</h5>
+              <p class="card-text">ابعاد: 1500 × 500 پیکسل</p>
+              <p class="card-text">ابعاد: 12.7 × 4.2 سانتی‌متر</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- پوستر ایسمینار -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1200x800.png?text=Esminar+Poster" alt="پوستر ایسمینار" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پوستر ایسمینار</h5>
-            <p class="card-text">ابعاد: 1200 × 800 پیکسل</p>
-            <p class="card-text">ابعاد: 10 × 8 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- پوستر ایوند -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1200x630.png?text=Event+Poster" alt="پوستر ایوند" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پوستر ایوند</h5>
-            <p class="card-text">ابعاد: 1200 × 630 پیکسل</p>
-            <p class="card-text">ابعاد: 10 × 5.3 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- پوستر لینکدین -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1200x627.png?text=LinkedIn+Poster" alt="پوستر لینکدین" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پوستر لینکدین</h5>
-            <p class="card-text">ابعاد: 1200 × 627 پیکسل</p>
-            <p class="card-text">ابعاد: 10 × 5.2 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- بخش دسته‌بندی موارد دیجیتال -->
-    <h3>موارد دیجیتال</h3>
-    <div class="row">
-      <!-- پست اینستاگرام -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1080x1080.png?text=Instagram+Post" alt="پست اینستاگرام" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">پست اینستاگرام</h5>
-            <p class="card-text">ابعاد: 1080 × 1080 پیکسل</p>
-            <p class="card-text">ابعاد: 10 × 10 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- استوری اینستاگرام -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1080x1920.png?text=Instagram+Story" alt="استوری اینستاگرام" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">استوری اینستاگرام</h5>
-            <p class="card-text">ابعاد: 1080 × 1920 پیکسل</p>
-            <p class="card-text">ابعاد: 9 × 16 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- گیف تبلیغاتی -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/600x600.png?text=Ad+GIF" alt="گیف تبلیغاتی" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">گیف تبلیغاتی</h5>
-            <p class="card-text">ابعاد: 600 × 600 پیکسل</p>
-            <p class="card-text">ابعاد: 5 × 5 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- بنر ایمیل -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/600x300.png?text=Email+Banner" alt="بنر ایمیل" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">بنر ایمیل</h5>
-            <p class="card-text">ابعاد: 600 × 300 پیکسل</p>
-            <p class="card-text">ابعاد: 5 × 2.5 سانتی‌متر</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- کاور لینکدین -->
-      <div class="col-md-4 col-sm-6">
-        <div class="card">
-          <img src="https://via.placeholder.com/1500x500.png?text=LinkedIn+Cover" alt="کاور لینکدین" class="card-img-top img-size">
-          <div class="card-body">
-            <h5 class="card-title">کاور لینکدین</h5>
-            <p class="card-text">ابعاد: 1500 × 500 پیکسل</p>
-            <p class="card-text">ابعاد: 12.7 × 4.2 سانتی‌متر</p>
-          </div>
-        </div>
+      <!-- بخش اشتراک‌گذاری لینک -->
+      <div class="share-box">
+        <h3>این صفحه را به اشتراک بگذارید</h3>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://example.com" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://example.com" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?text=https://example.com" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </div>
     </div>
 
